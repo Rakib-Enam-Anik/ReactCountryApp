@@ -1,2 +1,14 @@
-# ReactCountryApp
-It is a country app where we can search about different countries and learn their deatils.
+#Project 1 - Todo Project
+
+## step1: basic structure setup
+
+## step2: fetching data
+
+## step3 : display Data
+
+## step4 : remove country functionality
+
+## step5 : search country functionality
+
+
+
