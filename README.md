@@ -1,4 +1,4 @@
-#Project 1 - Todo Project
+#Project Country App - Todo Project
 
 ## step1: basic structure setup
 
