@@ -5,13 +5,21 @@ const  Country = (props) => {
     const {country} = props;
     const {name, flags, capital, population, area} = country;
 
+    const handleRemoveCountry = (name) => {
+      alert(name);
+    }
+
+
   return <article>
     <div>
-        <img src={flags.png} alt={name.common} />
+        <img src={flags.png} alt={name.common} className = {style.flag}/>
         <h3>Name: {name.common}</h3>
         <h3>Population: {population}</h3>
         <h3>Capital: {capital}</h3>
         <h3>Area:{area}</h3>
+        <button className={style.btn} onClick={()=>{
+            handleRemoveCountry(name.common)
+        }}>Remove Country</button>
     </div>
   </article>
 };

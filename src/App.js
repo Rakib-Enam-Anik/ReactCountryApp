@@ -10,6 +10,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [countries, setCountries] = useState([]);
+  const [filteredCountries, setFilteredCountries] = useState([]);
 
   const fetchData = async (url) => {
     setIsLoading(true);
@@ -34,10 +35,15 @@ try{
     fetchData(url)
   }, []);
 
+  const handleRemoveCountry = (name) => {
+    props.onRemoveCountry(name);
+  }
+
   return ( <div>Country App 
   {isLoading && <h2> Loading... </h2>}
   {error && <h2> { error.message } </h2>}
-  {countries && <Countries countries={countries}/>}
+  {countries && <Countries countries={countries}
+  onRemoveCountry={handleRemoveCountry}/>}
 
 
   </div>

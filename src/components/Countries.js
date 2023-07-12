@@ -1,14 +1,17 @@
 import React from 'react'
 
 const  Countries = (props) => {
-  return <sectioon> 
+  return( 
+    <section className={style.countries}>
     {props.countries.map((country) =>{
-        const countryNew = {country, id: uuidv4()};
-
-        return <Country {...countryNew} Key={countryNew.id}/>;
+        const countryNew = {country, id: uuidv4() };
+        return <Country 
+        {...countryNew}
+        key={countryNew.id}
+        onRemoveCountry={props.onRemoveCountry}/>;
     })}
-  
-  </sectioon>;
+   </section>
+  );
 };
 
 export default Countries;
